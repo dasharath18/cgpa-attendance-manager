@@ -1,0 +1,122 @@
+.calculator {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.form-row label {
+  width: 55%;
+  font-weight: 500;
+}
+
+.form-row input {
+  width: 40%;
+  padding: 6px;
+  font-size: 16px;
+}
+
+.button-group {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-group button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.result-message {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cgpa-calculator {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.subject-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.subject-row input {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.remove-btn {
+  padding: 6px 10px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #c62828;
+}
+
+button {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #125aa5;
+}
+
+.navigation-links {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navigation-links button {
+  background-color: rgb(56, 147, 56); /* optional: to keep button background transparent */
+  color: white; /* set text color to maroon */
+  /* border: 2px solid green; */
+  padding: 10px 20px; /* optional: add some padding */
+  cursor: pointer; /* change cursor on hover */
+  font-size: 16px; /* optional: set font size */
+  border-radius: 5px; /* optional: rounded corners */
+}
+
+/* Optional: add hover effect */
+.navigation-links button:hover {
+  background-color: darkgreen;
+  color: white;
+}
