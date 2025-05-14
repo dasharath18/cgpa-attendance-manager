@@ -1,6 +1,7 @@
 
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -43,6 +44,19 @@ app.post('/api/cgpa/booster', (req, res) => {
 });
 
 //  Start Server
-app.listen(5000, () => {
-  console.log('Backend running at http://localhost:5000');
+// app.listen(5000, () => {
+//   console.log('Backend running at http://localhost:5000');
+// });
+
+// ===== Serve React Frontend in Production =====
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+});
+
+// ===== Start Server =====
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Backend running at http://localhost:${PORT}`);
 });
