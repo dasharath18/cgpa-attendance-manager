@@ -11,8 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "path-to-regexp": "^6.2.1"
   },
-  "devDependencies": {},
   "description": ""
 }
