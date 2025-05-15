@@ -30,7 +30,7 @@ const CGPABooster = () => {
   const handleSubmit = async () => {
     if (!isValid()) return;
     try {
-      const { data } = await axios.post('http://localhost:5000/api/cgpa/booster', {
+      const { data } = await axios.post('api/cgpa/booster', {
         prevCgpa: +prevCgpa,
         prevCredits: +prevCredits,
         goalCgpa: +goalCgpa,

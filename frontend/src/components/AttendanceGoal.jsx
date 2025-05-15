@@ -27,7 +27,7 @@ const AttendanceGoal = () => {
   const handleUnknownTotal = async () => {
     if (!isValid()) return;
     try {
-      const { data } = await axios.post('http://localhost:5000/api/attendance/goal/unknown-total', {
+      const { data } = await axios.post('/api/attendance/goal/unknown-total', {
         attended: +attended,
         absent: +absent,
         goalPercent: +goal,
@@ -45,7 +45,7 @@ const AttendanceGoal = () => {
       return;
     }
     try {
-      const { data } = await axios.post('http://localhost:5000/api/attendance/goal/known-total', {
+      const { data } = await axios.post('/api/attendance/goal/known-total', {
         attended: +attended,
         total: t,
         goalPercent: +goal,
@@ -112,11 +112,11 @@ const AttendanceGoal = () => {
 
       {result && <p className="result-message">{result}</p>}
        <div className="navigation-links">
-        <Link to="/cgpa">
-          <button>Go to SGPA Calculator</button>
-        </Link>
         <Link to="/cgpa-booster">
           <button>Go to Target CGPA Planner</button>
+        </Link>
+        <Link to="/cgpa">
+          <button>Go to SGPA Calculator</button>
         </Link>
       </div>
     </div>

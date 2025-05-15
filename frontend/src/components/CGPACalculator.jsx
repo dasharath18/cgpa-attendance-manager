@@ -39,7 +39,7 @@ const CGPACalculator = () => {
       credits: +s.credits,
       grade: +s.grade,
     }));
-    const { data } = await axios.post('http://localhost:5000/api/cgpa/calculate', { subjects: parsedSubjects });
+    const { data } = await axios.post('/api/cgpa/calculate', { subjects: parsedSubjects });
     setCgpa(data.cgpa);
   };
 
